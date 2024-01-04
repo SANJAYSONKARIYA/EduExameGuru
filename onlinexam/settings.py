@@ -90,9 +90,13 @@ DATABASES = {
             'host': 'mongodb+srv://nstidehradun:dehradun@cluster0.ok0bgkw.mongodb.net/',
             'username': 'nstidehradun',
             'password': 'dehradun',
+            'ssl': True,
+            'ssl_cert_reqs': ssl.CERT_NONE,
         }
     }
 }
+
+
 
 # DATABASES = {
 #     'default': {
