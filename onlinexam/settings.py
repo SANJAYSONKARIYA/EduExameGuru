@@ -81,25 +81,25 @@ WSGI_APPLICATION = 'onlinexam.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'djongo',
-#         'NAME': 'Dehradun',  # Replace with your MongoDB database name
-#         'ENFORCE_SCHEMA': False,
-#         'CLIENT': {
-#             'host': 'mongodb+srv://nstidehradun:dehradun@cluster0.ok0bgkw.mongodb.net/',
-#             'username': 'nstidehradun',
-#             'password': 'dehradun',
-#         }
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR ,'db.sqlite3'),
+        'ENGINE': 'djongo',
+        'NAME': 'Dehradun',  # Replace with your MongoDB database name
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'mongodb+srv://nstidehradun:dehradun@cluster0.ok0bgkw.mongodb.net/',
+            'username': 'nstidehradun',
+            'password': 'dehradun',
+        }
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR ,'db.sqlite3'),
+#     }
+# }
 
 
 
