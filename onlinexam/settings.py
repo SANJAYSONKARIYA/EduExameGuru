@@ -85,11 +85,11 @@ import ssl  # This line should be at the beginning of the file or appropriate lo
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'Dehradun',  # Replace with your MongoDB database name
+        'NAME': 'Dehradun',  
         'CLIENT': {
-            'host': 'mongodb+srv://nstidehradun:dehradun@cluster0.ok0bgkw.mongodb.net/?ssl=true',
-            'username': 'nstidehradun',
-            'password': 'dehradun',
+            'host': 'mongodb+srv://EduExamGuru:gulshan@cluster0.ok0bgkw.mongodb.net/?ssl=true',
+            'username': 'EduExamGuru',
+            'password': 'gulshan',
         }
     }
 }
