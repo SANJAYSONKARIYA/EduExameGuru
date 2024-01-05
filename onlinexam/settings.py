@@ -88,7 +88,7 @@ import dj-database-url
 import os
 
 DATABASES = {
-	"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+	"default": dj_database_url.parse(os.environ.get("postgres://ungraduate_coders_user:QDv04TD9oZNLT3DEHYQJ5e4XRZBsEubn@dpg-cl6a7rhk857s73cqa7p0-a.singapore-postgres.render.com/ungraduate_coders"))
 }
 
 
