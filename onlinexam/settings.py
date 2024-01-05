@@ -80,28 +80,17 @@ WSGI_APPLICATION = 'onlinexam.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-import ssl
+
+
+
+
+import dj-database-url
+import os
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'Dehradun',  
-        'CLIENT': {
-            'host': 'mongodb+srv://EduExamGuru:gulshan@cluster0.ok0bgkw.mongodb.net/?ssl=true',
-            'username': 'EduExamGuru',
-            'password': 'gulshan',
-        }
-    }
+	"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-# Example usage:
-database = DATABASES.get('default', None)  # Replace 'default' with your specific database key
-if database is not None:
-    # Proceed with database-related operations
-    pass
-else:
-    # Handle the case when the database configuration is not found or is None
-    pass
 
 
 
@@ -111,6 +100,26 @@ else:
 
 
 
+
+
+
+
+
+
+
+# import ssl
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'Dehradun',  
+#         'CLIENT': {
+#             'host': 'mongodb+srv://EduExamGuru:gulshan@cluster0.ok0bgkw.mongodb.net/?ssl=true',
+#             'username': 'EduExamGuru',
+#             'password': 'gulshan',
+#         }
+#     }
+# }
 
 
 # DATABASES = {
@@ -122,12 +131,11 @@ else:
 #             'host': 'mongodb+srv://nstidehradun:dehradun@cluster0.ok0bgkw.mongodb.net/',
 #             'username': 'nstidehradun',
 #             'password': 'dehradun',
-#             'ssl': True,
-#             'ssl_cert_reqs': ssl.CERT_NONE,
+#          
+#       
 #         }
 #     }
 # }
-
 
 
 # DATABASES = {
