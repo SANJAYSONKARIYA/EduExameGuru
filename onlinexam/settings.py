@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'onlinexam.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-import ssl
+import ssl  # This line should be at the beginning of the file or appropriate location, without extra indentation
 
- DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'Dehradun',  # Replace with your MongoDB database name
@@ -93,6 +93,7 @@ import ssl
         }
     }
 }
+
 
 
 
