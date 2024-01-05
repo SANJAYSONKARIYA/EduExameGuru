@@ -81,20 +81,41 @@ WSGI_APPLICATION = 'onlinexam.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 import ssl
+
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'Dehradun',  # Replace with your MongoDB database name
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'host': 'mongodb+srv://nstidehradun:dehradun@cluster0.ok0bgkw.mongodb.net/',
-            'username': 'nstidehradun',
-            'password': 'dehradun',
-            'ssl': True,
-            'ssl_cert_reqs': ssl.CERT_NONE,
+            'host': 'mongodb+srv://nstidehradun:dehradun@cluster0.ok0bgkw.mongodb.net/?ssl=true',
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'Dehradun',  # Replace with your MongoDB database name
+#         'ENFORCE_SCHEMA': False,
+#         'CLIENT': {
+#             'host': 'mongodb+srv://nstidehradun:dehradun@cluster0.ok0bgkw.mongodb.net/',
+#             'username': 'nstidehradun',
+#             'password': 'dehradun',
+#             'ssl': True,
+#             'ssl_cert_reqs': ssl.CERT_NONE,
+#         }
+#     }
+# }
 
 
 
