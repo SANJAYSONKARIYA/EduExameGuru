@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'onlinexam.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-import ssl  # This line should be at the beginning of the file or appropriate location, without extra indentation
+import ssl
 
 DATABASES = {
     'default': {
@@ -93,6 +93,15 @@ DATABASES = {
         }
     }
 }
+
+# Example usage:
+database = DATABASES.get('default', None)  # Replace 'default' with your specific database key
+if database is not None:
+    # Proceed with database-related operations
+    pass
+else:
+    # Handle the case when the database configuration is not found or is None
+    pass
 
 
 
